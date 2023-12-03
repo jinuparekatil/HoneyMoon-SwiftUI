@@ -17,6 +17,12 @@
 		7632BD152B1C435D001D825E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7632BD142B1C435D001D825E /* CardView.swift */; };
 		7632BD172B1C4D54001D825E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7632BD162B1C4D54001D825E /* HeaderView.swift */; };
 		7632BD192B1C528F001D825E /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7632BD182B1C528F001D825E /* FooterView.swift */; };
+		7632BD1C2B1C65A2001D825E /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7632BD1B2B1C65A2001D825E /* HeaderComponent.swift */; };
+		76A6446D2B1C7692007C33D3 /* GuideComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6446C2B1C7692007C33D3 /* GuideComponent.swift */; };
+		76A6446F2B1C78E7007C33D3 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6446E2B1C78E7007C33D3 /* GuideView.swift */; };
+		76A644712B1C8D0A007C33D3 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A644702B1C8D0A007C33D3 /* InfoView.swift */; };
+		76A644732B1C8DD1007C33D3 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A644722B1C8DD1007C33D3 /* TitleModifier.swift */; };
+		76A644762B1C8FB2007C33D3 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A644752B1C8FB2007C33D3 /* ButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		7632BD142B1C435D001D825E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7632BD162B1C4D54001D825E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		7632BD182B1C528F001D825E /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		7632BD1B2B1C65A2001D825E /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
+		76A6446C2B1C7692007C33D3 /* GuideComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponent.swift; sourceTree = "<group>"; };
+		76A6446E2B1C78E7007C33D3 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		76A644702B1C8D0A007C33D3 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		76A644722B1C8DD1007C33D3 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		76A644752B1C8FB2007C33D3 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,8 @@
 		7632BCFC2B1C3D3C001D825E /* HoneyMoon SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				76A644742B1C8E00007C33D3 /* Modifier */,
+				7632BD1A2B1C6577001D825E /* Components */,
 				7632BD132B1C434C001D825E /* View */,
 				7632BD122B1C4269001D825E /* Data */,
 				7632BD0F2B1C41D7001D825E /* Model */,
@@ -105,8 +119,28 @@
 				7632BD182B1C528F001D825E /* FooterView.swift */,
 				7632BD162B1C4D54001D825E /* HeaderView.swift */,
 				7632BD142B1C435D001D825E /* CardView.swift */,
+				76A6446E2B1C78E7007C33D3 /* GuideView.swift */,
+				76A644702B1C8D0A007C33D3 /* InfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7632BD1A2B1C6577001D825E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7632BD1B2B1C65A2001D825E /* HeaderComponent.swift */,
+				76A6446C2B1C7692007C33D3 /* GuideComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		76A644742B1C8E00007C33D3 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				76A644722B1C8DD1007C33D3 /* TitleModifier.swift */,
+				76A644752B1C8FB2007C33D3 /* ButtonModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +215,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7632BD002B1C3D3C001D825E /* ContentView.swift in Sources */,
+				76A644712B1C8D0A007C33D3 /* InfoView.swift in Sources */,
 				7632BD192B1C528F001D825E /* FooterView.swift in Sources */,
+				76A644732B1C8DD1007C33D3 /* TitleModifier.swift in Sources */,
 				7632BD172B1C4D54001D825E /* HeaderView.swift in Sources */,
 				7632BCFE2B1C3D3C001D825E /* HoneyMoon_SwiftUIApp.swift in Sources */,
+				76A644762B1C8FB2007C33D3 /* ButtonModifier.swift in Sources */,
+				7632BD1C2B1C65A2001D825E /* HeaderComponent.swift in Sources */,
 				7632BD112B1C4261001D825E /* HonemoonData.swift in Sources */,
 				7632BD0E2B1C41CB001D825E /* HonemoonModel.swift in Sources */,
 				7632BD152B1C435D001D825E /* CardView.swift in Sources */,
+				76A6446D2B1C7692007C33D3 /* GuideComponent.swift in Sources */,
+				76A6446F2B1C78E7007C33D3 /* GuideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

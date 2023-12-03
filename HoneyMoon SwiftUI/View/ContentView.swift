@@ -14,16 +14,29 @@ struct ContentView: View {
     @State var showInfo: Bool = false
     
     @GestureState private var dragState = DragState.inactive
+    private var dragAreaThreshold: CGFloat = 65.0
+    
+    @State private var  lastCardIndex: Int = 1
 
     // MARK: - Card views
     
-    var cardViews: [CardView] = {
+    @State var cardViews: [CardView] = {
         var views = [CardView]()
         for index in 0..<2 {
             views.append(CardView(honeymoon: honeymoonData[index]))
         }
         return views
     }()
+    
+    // MARK: - MOVE CARDS
+    private func moveCards(){
+        cardViews.removeFirst()
+        self.lastCardIndex += 1
+        
+        let honeyMoon = honeymoonData[lastCardIndex % honeymoonData.count]
+        let newCardView =   CardView(honeymoon: honeyMoon)
+        cardViews.append(newCardView)
+    }
     // MARK: - TOP CARD
     
     private func isTopCard(cardView: CardView) -> Bool{
@@ -83,6 +96,18 @@ struct ContentView: View {
                 ForEach(cardViews){ cardView in
                     cardView
                         .zIndex(self.isTopCard(cardView: cardView) ? 1 : 0)
+                        .overlay(
+                            ZStack{
+                                // X.mark Symbol
+                                Image(systemName: "x.circle")
+                                    .modifier(SymbolModifier())
+                                    .opacity(self.dragState.translation.width < -self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
+                                Image(systemName: "heart.circle")
+                                    .modifier(SymbolModifier())
+                                    .opacity(self.dragState.translation.width > self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1 : 0)
+                            }
+                        )
+                    
                         .offset(x: self.isTopCard(cardView: cardView) ?  self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ? self.dragState.translation.height : 0)
                         .scaleEffect(self.dragState.isDragging && self.isTopCard(cardView: cardView)  ? 0.85 : 1.0)
                         .rotationEffect(Angle(degrees: self.isTopCard(cardView: cardView) ? Double(self.dragState.translation.width/12) : 0))
@@ -99,6 +124,14 @@ struct ContentView: View {
                                     break
                                 }
                             })
+                                .onEnded({ value in
+                                    guard case .second(true, let drag?) = value else{
+                                        return
+                                    }
+                                    if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold{
+                                        self.moveCards()
+                                    }
+                                })
                         )
                     
                     

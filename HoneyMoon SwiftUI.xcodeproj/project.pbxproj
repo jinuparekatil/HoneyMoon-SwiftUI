@@ -24,6 +24,10 @@
 		76A644732B1C8DD1007C33D3 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A644722B1C8DD1007C33D3 /* TitleModifier.swift */; };
 		76A644762B1C8FB2007C33D3 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A644752B1C8FB2007C33D3 /* ButtonModifier.swift */; };
 		76A644782B1CAFEE007C33D3 /* SymbolModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A644772B1CAFEE007C33D3 /* SymbolModifier.swift */; };
+		76A6447B2B1CB7AC007C33D3 /* Cardtransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6447A2B1CB7AC007C33D3 /* Cardtransition.swift */; };
+		76A6447E2B1CBB77007C33D3 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6447D2B1CBB77007C33D3 /* PlaySound.swift */; };
+		76A644822B1CBC60007C33D3 /* sound-click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76A644802B1CBC5F007C33D3 /* sound-click.mp3 */; };
+		76A644832B1CBC60007C33D3 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76A644812B1CBC5F007C33D3 /* sound-rise.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		76A644722B1C8DD1007C33D3 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
 		76A644752B1C8FB2007C33D3 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		76A644772B1CAFEE007C33D3 /* SymbolModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolModifier.swift; sourceTree = "<group>"; };
+		76A6447A2B1CB7AC007C33D3 /* Cardtransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardtransition.swift; sourceTree = "<group>"; };
+		76A6447D2B1CBB77007C33D3 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		76A644802B1CBC5F007C33D3 /* sound-click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-click.mp3"; sourceTree = "<group>"; };
+		76A644812B1CBC5F007C33D3 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,9 @@
 		7632BCFC2B1C3D3C001D825E /* HoneyMoon SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				76A6447F2B1CBC45007C33D3 /* Sounds */,
+				76A6447C2B1CBB65007C33D3 /* Helper */,
+				76A644792B1CB78E007C33D3 /* Extension */,
 				76A644742B1C8E00007C33D3 /* Modifier */,
 				7632BD1A2B1C6577001D825E /* Components */,
 				7632BD132B1C434C001D825E /* View */,
@@ -146,6 +157,31 @@
 			path = Modifier;
 			sourceTree = "<group>";
 		};
+		76A644792B1CB78E007C33D3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				76A6447A2B1CB7AC007C33D3 /* Cardtransition.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		76A6447C2B1CBB65007C33D3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				76A6447D2B1CBB77007C33D3 /* PlaySound.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		76A6447F2B1CBC45007C33D3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				76A644802B1CBC5F007C33D3 /* sound-click.mp3 */,
+				76A644812B1CBC5F007C33D3 /* sound-rise.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,7 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A644832B1CBC60007C33D3 /* sound-rise.mp3 in Resources */,
 				7632BD0C2B1C3E26001D825E /* Launch Screen.storyboard in Resources */,
+				76A644822B1CBC60007C33D3 /* sound-click.mp3 in Resources */,
 				7632BD052B1C3D3F001D825E /* Preview Assets.xcassets in Resources */,
 				7632BD022B1C3D3F001D825E /* Assets.xcassets in Resources */,
 			);
@@ -218,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7632BD002B1C3D3C001D825E /* ContentView.swift in Sources */,
+				76A6447B2B1CB7AC007C33D3 /* Cardtransition.swift in Sources */,
 				76A644712B1C8D0A007C33D3 /* InfoView.swift in Sources */,
 				7632BD192B1C528F001D825E /* FooterView.swift in Sources */,
 				76A644732B1C8DD1007C33D3 /* TitleModifier.swift in Sources */,
@@ -225,6 +264,7 @@
 				7632BD172B1C4D54001D825E /* HeaderView.swift in Sources */,
 				7632BCFE2B1C3D3C001D825E /* HoneyMoon_SwiftUIApp.swift in Sources */,
 				76A644762B1C8FB2007C33D3 /* ButtonModifier.swift in Sources */,
+				76A6447E2B1CBB77007C33D3 /* PlaySound.swift in Sources */,
 				7632BD1C2B1C65A2001D825E /* HeaderComponent.swift in Sources */,
 				7632BD112B1C4261001D825E /* HonemoonData.swift in Sources */,
 				7632BD0E2B1C41CB001D825E /* HonemoonModel.swift in Sources */,

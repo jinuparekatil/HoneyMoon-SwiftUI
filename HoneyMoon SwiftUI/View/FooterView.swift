@@ -11,6 +11,8 @@ struct FooterView: View {
     
     // MARK: - PROPERTIES
     @Binding var showBookingAlert: Bool
+    let haptics = UINotificationFeedbackGenerator()
+    
     var body: some View {
         HStack {
             Image(systemName: "xmark.circle")
@@ -18,7 +20,8 @@ struct FooterView: View {
             
             Spacer()
             Button(action: {
-                
+                playSound(sound: "sound-click", type: "mp3")
+                self.haptics.notificationOccurred(.success)
                 self.showBookingAlert.toggle()
 //                print("success")
             }, label: {

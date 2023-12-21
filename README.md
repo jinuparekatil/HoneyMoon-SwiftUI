@@ -4,7 +4,7 @@ Welcome to the SwiftUI Honeymoon App project! 🌴
 
 ## Overview
 
-This project is a hands-on SwiftUI tutorial that guides you through building a delightful iOS 13 and iPadOS app with a Tinder-inspired user interface. The app allows users to explore and express their preferences for honeymoon destinations using swipe gestures.
+This project is a hands-on SwiftUI iOS and iPadOS app with a Tinder-inspired user interface. The app allows users to explore and express their preferences for honeymoon destinations using swipe gestures.
 
 ## Features
 
